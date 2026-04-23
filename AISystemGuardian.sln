@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AISystemGuardian", "AISystemGuardian\AISystemGuardian.csproj", "{EED47EBC-C308-488F-AAEE-E06A4F7F428D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EED47EBC-C308-488F-AAEE-E06A4F7F428D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED47EBC-C308-488F-AAEE-E06A4F7F428D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED47EBC-C308-488F-AAEE-E06A4F7F428D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED47EBC-C308-488F-AAEE-E06A4F7F428D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B73BB484-30FC-4709-B605-34229F5F2731}
+	EndGlobalSection
+EndGlobal

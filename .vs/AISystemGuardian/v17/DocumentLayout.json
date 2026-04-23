@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DATA BACKUP\\AISystemGuardian\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\service\\loggingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\service\\loggingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\service\\systemmonitorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\service\\systemmonitorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\models\\systemmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\models\\systemmetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoggingService.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\LoggingService.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\Service\\LoggingService.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\LoggingService.cs",
+              "RelativeToolTip": "AISystemGuardian\\Service\\LoggingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:59:51.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SystemMonitorService.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\SystemMonitorService.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\Service\\SystemMonitorService.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\SystemMonitorService.cs",
+              "RelativeToolTip": "AISystemGuardian\\Service\\SystemMonitorService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwD4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:04:58.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SystemMetrics.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Models\\SystemMetrics.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\Models\\SystemMetrics.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Models\\SystemMetrics.cs",
+              "RelativeToolTip": "AISystemGuardian\\Models\\SystemMetrics.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:02:36.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Program.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\Program.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Program.cs",
+              "RelativeToolTip": "AISystemGuardian\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:04:35.288Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
