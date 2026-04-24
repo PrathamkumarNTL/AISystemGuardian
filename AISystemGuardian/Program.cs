@@ -6,11 +6,13 @@ class Program
         var monitor = new SystemMonitorService();
         var logger = new LoggingService();
         var security  = new SecurityMonitorService();
+        var alertService = new AlertService();
 
         while (true)
         {
             var data = monitor.GetMetrics();
             var deviceUsage = security.CheckDeviceUsage();
+            var alerts = alertService.GenerateAlerts(data, deviceUsage);
 
             Console.Clear();
 
@@ -34,6 +36,12 @@ class Program
             }
 
             logger.Log(data);
+
+            Console.WriteLine("\n=== Alerts ===");
+            foreach (var alert in alerts)
+            {
+                Console.WriteLine($"[{alert.Severity}] {alert.Message}");
+            }
 
             Thread.Sleep(5000);
         }
