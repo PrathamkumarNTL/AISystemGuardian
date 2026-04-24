@@ -26,7 +26,7 @@ namespace AISystemGuardian.Service
 
         public void Log(SystemMetrics data)
         {
-            string line = $"{data.TimeStamp},{data.CpuUsage},{data.RamUsage},{data.CpuTemperature}";
+            string line = $"{data.Timestamp},{data.CpuUsage},{data.RamUsage},{data.CpuTemperature}";
 
             File.AppendAllText(_filePath, line + Environment.NewLine);
         }

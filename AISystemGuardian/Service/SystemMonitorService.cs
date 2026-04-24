@@ -54,7 +54,7 @@ namespace AISystemGuardian.Service
                 CpuUsage = cpuUsage,
                 CpuTemperature = cpuTemp,
                 RamUsage = ramUsage,
-                TimeStamp = DateTime.Now
+                Timestamp = DateTime.Now
             };
         }
 

@@ -70,3 +70,4 @@ D:\DATA BACKUP\AISystemGuardian\AISystemGuardian\bin\Debug\net8.0\System.Securit
 D:\DATA BACKUP\AISystemGuardian\AISystemGuardian\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 D:\DATA BACKUP\AISystemGuardian\AISystemGuardian\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 D:\DATA BACKUP\AISystemGuardian\AISystemGuardian\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+D:\DATA BACKUP\AISystemGuardian\AISystemGuardian\obj\Debug\net8.0\AISystemGuardian.sourcelink.json
