@@ -1,4 +1,5 @@
-﻿using AISystemGuardian.Service;
+﻿using AISystemGuardian.Models;
+using AISystemGuardian.Service;
 class Program
 {
     static void Main(string[] args)
@@ -7,6 +8,7 @@ class Program
         var logger = new LoggingService();
         var security  = new SecurityMonitorService();
         var alertService = new AlertService();
+        var notifier = new NotificationService();
 
         while (true)
         {
@@ -41,7 +43,16 @@ class Program
             foreach (var alert in alerts)
             {
                 Console.WriteLine($"[{alert.Severity}] {alert.Message}");
+
+                notifier.ShowNotification(alert);
             }
+
+            notifier.ShowNotification(new Alert
+            {
+                Message = "Test Notification",
+                Severity = "Info",
+                Timestamp = DateTime.Now
+            });
 
             Thread.Sleep(5000);
         }

@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,13 +30,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\NotificationService.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\Service\\NotificationService.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\NotificationService.cs",
+              "RelativeToolTip": "AISystemGuardian\\Service\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T06:37:10.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Program.cs",
               "RelativeDocumentMoniker": "AISystemGuardian\\Program.cs",
               "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Program.cs",
               "RelativeToolTip": "AISystemGuardian\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwCsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T05:04:35.288Z",
               "EditorCaption": ""
