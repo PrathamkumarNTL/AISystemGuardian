@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vY0zdOTofiQ=",
+  "dgSpecHash": "kzvLKInyP3Y=",
   "success": true,
   "projectFilePath": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\AISystemGuardian.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\PRATHAMKUMARNTL-SOFT\\.nuget\\packages\\system.io.ports\\10.0.3\\system.io.ports.10.0.3.nupkg.sha512",
     "C:\\Users\\PRATHAMKUMARNTL-SOFT\\.nuget\\packages\\system.management\\10.0.2\\system.management.10.0.2.nupkg.sha512",
     "C:\\Users\\PRATHAMKUMARNTL-SOFT\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.7\\system.security.cryptography.protecteddata.10.0.7.nupkg.sha512",
+    "C:\\Users\\PRATHAMKUMARNTL-SOFT\\.nuget\\packages\\system.speech\\10.0.7\\system.speech.10.0.7.nupkg.sha512",
     "C:\\Users\\PRATHAMKUMARNTL-SOFT\\.nuget\\packages\\system.threading.accesscontrol\\10.0.7\\system.threading.accesscontrol.10.0.7.nupkg.sha512"
   ],
   "logs": []

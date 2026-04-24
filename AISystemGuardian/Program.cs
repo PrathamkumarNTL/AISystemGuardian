@@ -9,6 +9,7 @@ class Program
         var security  = new SecurityMonitorService();
         var alertService = new AlertService();
         var notifier = new NotificationService();
+        var voiceAlert = new VoiceService();
 
         while (true)
         {
@@ -45,14 +46,8 @@ class Program
                 Console.WriteLine($"[{alert.Severity}] {alert.Message}");
 
                 notifier.ShowNotification(alert);
+                voiceAlert.SpeakAlert(alert);
             }
-
-            notifier.ShowNotification(new Alert
-            {
-                Message = "Test Notification",
-                Severity = "Info",
-                Timestamp = DateTime.Now
-            });
 
             Thread.Sleep(5000);
         }

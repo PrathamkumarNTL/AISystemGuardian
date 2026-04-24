@@ -1464,6 +1464,28 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.Speech/10.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Speech.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Threading.AccessControl/10.0.7": {
         "type": "package",
         "compile": {
@@ -2471,6 +2493,38 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Speech/10.0.7": {
+      "sha512": "NuWzqrK33827U2DBwoHTuFGpAIKZSodhlOxPdAKM17DkyUcTT3NUZgqvwkw1XyLR+WGcINpA2BdB7fVTv8vaaQ==",
+      "type": "package",
+      "path": "system.speech/10.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Speech.targets",
+        "lib/net10.0/System.Speech.dll",
+        "lib/net10.0/System.Speech.xml",
+        "lib/net462/_._",
+        "lib/net8.0/System.Speech.dll",
+        "lib/net8.0/System.Speech.xml",
+        "lib/net9.0/System.Speech.dll",
+        "lib/net9.0/System.Speech.xml",
+        "lib/netstandard2.0/System.Speech.dll",
+        "lib/netstandard2.0/System.Speech.xml",
+        "runtimes/win/lib/net10.0/System.Speech.dll",
+        "runtimes/win/lib/net10.0/System.Speech.xml",
+        "runtimes/win/lib/net8.0/System.Speech.dll",
+        "runtimes/win/lib/net8.0/System.Speech.xml",
+        "runtimes/win/lib/net9.0/System.Speech.dll",
+        "runtimes/win/lib/net9.0/System.Speech.xml",
+        "system.speech.10.0.7.nupkg.sha512",
+        "system.speech.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Threading.AccessControl/10.0.7": {
       "sha512": "BZFhNMeLdTYkKiaG3zUMw6Uom9Ufqw02V0oPz//mYNexjVVAdtw2Xz/52RIZmcDabpvxh4hQ5p/TuPB3ENGPIQ==",
       "type": "package",
@@ -2511,7 +2565,8 @@
     "net8.0-windows7.0": [
       "LibreHardwareMonitorLib >= 0.9.6",
       "Microsoft.VisualBasic >= 10.3.0",
-      "System.Diagnostics.PerformanceCounter >= 10.0.7"
+      "System.Diagnostics.PerformanceCounter >= 10.0.7",
+      "System.Speech >= 10.0.7"
     ]
   },
   "packageFolders": {
@@ -2574,6 +2629,10 @@
             "version": "[10.3.0, )"
           },
           "System.Diagnostics.PerformanceCounter": {
+            "target": "Package",
+            "version": "[10.0.7, )"
+          },
+          "System.Speech": {
             "target": "Package",
             "version": "[10.0.7, )"
           }
