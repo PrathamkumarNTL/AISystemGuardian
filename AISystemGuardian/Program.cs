@@ -1,5 +1,4 @@
-﻿using AISystemGuardian.AI;
-using AISystemGuardian.Models;
+﻿using AISystemGuardian.Models;
 using AISystemGuardian.Service;
 
 class Program
@@ -15,9 +14,11 @@ class Program
         var notifier = new NotificationService();
         var voiceAlert = new VoiceService();
         var dataCollector = new DataCollectionService();
-        var aiService = new AIModelService();
         var fusionService = new AIAlertFusionService();
         var anomalyDetector = new AnomalyDetectorService();
+
+        // ✅ ONNX MODEL SERVICE (IMPORTANT)
+        var onnxService = new OnnxPredictionService("model.onnx");
 
         while (true)
         {
@@ -50,25 +51,22 @@ class Program
 
             logger.Log(data);
 
-            // Optional (enable later if needed)
-            // dataCollector.SaveData(data, deviceUsage, alerts);
-
             // =========================
-            // AI PREDICTION
+            // ✅ ONNX AI PREDICTION
             // =========================
 
-            var input = new ModelInput
-            {
-                CpuUsage = data.CpuUsage,
-                RamUsage = data.RamUsage,
-                CpuTemperature = data.CpuTemperature,
-                Microphone = deviceUsage.Any(d => d.IsMicrophoneActive) ? 1f : 0f,
-                Camera = deviceUsage.Any(d => d.IsCameraActive) ? 1f : 0f
-            };
+            float mic = deviceUsage.Any(d => d.IsMicrophoneActive) ? 1f : 0f;
+            float cam = deviceUsage.Any(d => d.IsCameraActive) ? 1f : 0f;
 
-            var prediction = aiService.Predict(input);
+            var prediction = onnxService.Predict(
+                data.CpuUsage,
+                data.RamUsage,
+                data.CpuTemperature,
+                mic,
+                cam
+            );
 
-            Console.WriteLine("\n=== AI Decision ===");
+            Console.WriteLine("\n=== AI Decision (ONNX) ===");
             Console.WriteLine($"AI says system is: {prediction}");
 
             // =========================
@@ -81,7 +79,6 @@ class Program
             {
                 Console.WriteLine("🚨 Unusual behavior detected!");
 
-                // 👉 Add anomaly as alert
                 alerts.Add(new Alert
                 {
                     Severity = "Critical",

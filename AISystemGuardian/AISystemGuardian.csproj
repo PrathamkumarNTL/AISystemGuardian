@@ -11,12 +11,19 @@
   <ItemGroup>
     <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.6" />
     <PackageReference Include="Microsoft.ML" Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.25.0" />
     <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="10.0.7" />
     <PackageReference Include="System.Speech" Version="10.0.7" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="model.onnx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="model.onnx.data">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="training_data .csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

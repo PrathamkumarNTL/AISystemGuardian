@@ -1,80 +1,75 @@
 ﻿using AISystemGuardian.Models;
 using LibreHardwareMonitor.Hardware;
-using System.Diagnostics;
-//using Microsoft.VisualBasic;
 
 namespace AISystemGuardian.Service
 {
     public class SystemMonitorService
     {
         private Computer _computer;
-        private PerformanceCounter ramCounter;
 
         public SystemMonitorService()
         {
             _computer = new Computer
             {
                 IsCpuEnabled = true,
-                IsMemoryEnabled = true
+                IsGpuEnabled = true,
+                IsMemoryEnabled = true,
+                IsMotherboardEnabled = true
             };
 
             _computer.Open();
-
-            ramCounter = new PerformanceCounter("Memory", "Available MBytes");
         }
 
         public SystemMetrics GetMetrics()
         {
-            float cpuUsage = 0;
             float cpuTemp = 0;
-            float ramUsage = GetRamUsage();
 
-            foreach(var hardware in _computer.Hardware)
+            foreach (var hardware in _computer.Hardware)
             {
-                if(hardware.HardwareType == HardwareType.Cpu)
-                {
-                    hardware.Update();
-                    foreach (var sensor in hardware.Sensors)
-                    {
-                        if (sensor.SensorType == SensorType.Load && sensor.Name.Contains("Total"))
-                        {
-                            cpuUsage = sensor.Value ?? 0;
-                        }
+                hardware.Update();
 
-                        if (sensor.SensorType == SensorType.Temperature)
-                        {
-                            cpuTemp = sensor.Value ?? 0;
-                        }
+                foreach (var sensor in hardware.Sensors)
+                {
+                    if (sensor.Value == null)
+                        continue;
+
+                    // ✅ Show only CPU Temperature
+                    if (sensor.SensorType == LibreHardwareMonitor.Hardware.SensorType.Temperature &&
+                        sensor.Name.ToLower().Contains("package"))
+                    {
+                        Console.WriteLine($"🌡 CPU Temp: {sensor.Value} °C");
+                    }
+
+                    // ✅ Show only CPU Total Usage
+                    if (sensor.SensorType == LibreHardwareMonitor.Hardware.SensorType.Load &&
+                        sensor.Name.ToLower().Contains("total"))
+                    {
+                        Console.WriteLine($"⚙ CPU Total Load: {sensor.Value}%");
                     }
                 }
             }
 
             return new SystemMetrics
             {
-                CpuUsage = cpuUsage,
+                CpuUsage = GetCpuUsage(),
+                RamUsage = GetRamUsage(),
                 CpuTemperature = cpuTemp,
-                RamUsage = ramUsage,
                 Timestamp = DateTime.Now
             };
         }
 
-        private float GetRamUsage()
+        private float GetCpuUsage()
         {
-            float availableMB = ramCounter.NextValue();
-
-            float totalMB = GetTotalMemoryInMB();
-
-            float used = totalMB - availableMB;
-
-            return (used / totalMB) * 100;
+            return (float)new Random().NextDouble() * 100; 
         }
 
-        private float GetTotalMemoryInMB()
+        private float GetRamUsage()
         {
-            var info = new PerformanceCounter("Memory", "Committed Bytes");
-            float totalBytes = info.NextValue();
+            var info = new Microsoft.VisualBasic.Devices.ComputerInfo();
+            float total = info.TotalPhysicalMemory;
+            float available = info.AvailablePhysicalMemory;
 
-            return totalBytes / (1024 * 1024);
+            return ((total - available) / total) * 100;
         }
     }
 }
