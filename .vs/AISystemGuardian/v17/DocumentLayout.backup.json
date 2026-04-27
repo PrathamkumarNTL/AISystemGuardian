@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\ai\\modelinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\ai\\modelinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\service\\aimodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\service\\aimodelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\ai\\modeloutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\ai\\modeloutput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|d:\\data backup\\aisystemguardian\\aisystemguardian\\service\\datacollectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EED47EBC-C308-488F-AAEE-E06A4F7F428D}|AISystemGuardian\\AISystemGuardian.csproj|solutionrelative:aisystemguardian\\service\\datacollectionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,40 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AIModelService.cs",
-              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\AIModelService.cs",
-              "RelativeDocumentMoniker": "AISystemGuardian\\Service\\AIModelService.cs",
-              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\AIModelService.cs",
-              "RelativeToolTip": "AISystemGuardian\\Service\\AIModelService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB0AAAAMAAAAAAAAAA==",
+              "Title": "ModelInput.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\AI\\ModelInput.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\AI\\ModelInput.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\AI\\ModelInput.cs",
+              "RelativeToolTip": "AISystemGuardian\\AI\\ModelInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T05:55:47.155Z",
+              "WhenOpened": "2026-04-27T08:18:57.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ModelOutput.cs",
-              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\AI\\ModelOutput.cs",
-              "RelativeDocumentMoniker": "AISystemGuardian\\AI\\ModelOutput.cs",
-              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\AI\\ModelOutput.cs",
-              "RelativeToolTip": "AISystemGuardian\\AI\\ModelOutput.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABNAAAAAAAAAA==",
+              "Title": "AIModelService.cs",
+              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\AIModelService.cs",
+              "RelativeDocumentMoniker": "AISystemGuardian\\Service\\AIModelService.cs",
+              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\AIModelService.cs",
+              "RelativeToolTip": "AISystemGuardian\\Service\\AIModelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T05:53:23.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataCollectionService.cs",
-              "DocumentMoniker": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\DataCollectionService.cs",
-              "RelativeDocumentMoniker": "AISystemGuardian\\Service\\DataCollectionService.cs",
-              "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Service\\DataCollectionService.cs",
-              "RelativeToolTip": "AISystemGuardian\\Service\\DataCollectionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T10:03:15.096Z",
+              "WhenOpened": "2026-04-27T08:06:35.275Z",
               "EditorCaption": ""
             },
             {
@@ -83,7 +66,7 @@
               "RelativeDocumentMoniker": "AISystemGuardian\\Program.cs",
               "ToolTip": "D:\\DATA BACKUP\\AISystemGuardian\\AISystemGuardian\\Program.cs",
               "RelativeToolTip": "AISystemGuardian\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAA6wD8AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T05:04:35.288Z",
               "EditorCaption": ""

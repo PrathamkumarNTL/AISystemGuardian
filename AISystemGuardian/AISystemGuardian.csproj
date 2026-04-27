@@ -16,4 +16,13 @@
     <PackageReference Include="System.Speech" Version="10.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="training_data .csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="training_data.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,5 @@
-﻿using AISystemGuardian.Service;
+﻿using AISystemGuardian.AI;
+using AISystemGuardian.Service;
 class Program
 {
     static void Main(string[] args)
@@ -10,6 +11,9 @@ class Program
         var notifier = new NotificationService();
         var voiceAlert = new VoiceService();
         var dataCollector = new DataCollectionService();
+        var aiService = new AIModelService();
+        var dataPath = Path.Combine(Directory.GetCurrentDirectory(), "training_data.csv");
+        //aiService.TrainModel(dataPath); ;
 
         while (true)
         {
@@ -40,7 +44,7 @@ class Program
 
             logger.Log(data);
 
-            dataCollector.SaveData(data, deviceUsage, alerts);
+            //dataCollector.SaveData(data, deviceUsage, alerts);
 
             Console.WriteLine("\n=== Alerts ===");
             foreach (var alert in alerts)
@@ -50,6 +54,20 @@ class Program
                 notifier.ShowNotification(alert);
                 voiceAlert.SpeakAlert(alert);
             }
+
+            var input = new ModelInput
+            {
+                CpuUsage = data.CpuUsage,
+                RamUsage = data.RamUsage,
+                CpuTemperature = data.CpuTemperature,
+                Microphone = deviceUsage.Any(d => d.IsMicrophoneActive) ? 1f : 0f,
+                Camera = deviceUsage.Any(d => d.IsCameraActive) ? 1f : 0f
+            };
+
+            var prediction = aiService.Predict(input);
+
+            Console.WriteLine($"\n=== AI Prediction ===");
+            Console.WriteLine($"System State: {prediction}");
 
             Thread.Sleep(5000);
         }
