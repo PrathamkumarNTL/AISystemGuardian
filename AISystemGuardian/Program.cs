@@ -1,5 +1,4 @@
-﻿using AISystemGuardian.Models;
-using AISystemGuardian.Service;
+﻿using AISystemGuardian.Service;
 class Program
 {
     static void Main(string[] args)
@@ -10,6 +9,7 @@ class Program
         var alertService = new AlertService();
         var notifier = new NotificationService();
         var voiceAlert = new VoiceService();
+        var dataCollector = new DataCollectionService();
 
         while (true)
         {
@@ -39,6 +39,8 @@ class Program
             }
 
             logger.Log(data);
+
+            dataCollector.SaveData(data, deviceUsage, alerts);
 
             Console.WriteLine("\n=== Alerts ===");
             foreach (var alert in alerts)

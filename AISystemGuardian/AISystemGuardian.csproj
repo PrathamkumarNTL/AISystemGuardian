@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.6" />
+    <PackageReference Include="Microsoft.ML" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="10.0.7" />
     <PackageReference Include="System.Speech" Version="10.0.7" />
