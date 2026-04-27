@@ -37,7 +37,8 @@ namespace AISystemGuardian.Service
                 }
             }
 
-            return result;
+            
+            return result.GroupBy(d => d.ProcessName).Select(g => g.First()).ToList();
         }
 
         private bool IsMicrophoneBeingUsed(string processName)

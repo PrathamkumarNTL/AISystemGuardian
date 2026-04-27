@@ -2,6 +2,7 @@
 using AISystemGuardian.Service;
 class Program
 {
+    
     static void Main(string[] args)
     {
         var monitor = new SystemMonitorService();
@@ -14,6 +15,8 @@ class Program
         var aiService = new AIModelService();
         var dataPath = Path.Combine(Directory.GetCurrentDirectory(), "training_data.csv");
         //aiService.TrainModel(dataPath); ;
+        var fusionService = new AIAlertFusionService();
+
 
         while (true)
         {
@@ -47,13 +50,7 @@ class Program
             //dataCollector.SaveData(data, deviceUsage, alerts);
 
             Console.WriteLine("\n=== Alerts ===");
-            foreach (var alert in alerts)
-            {
-                Console.WriteLine($"[{alert.Severity}] {alert.Message}");
-
-                notifier.ShowNotification(alert);
-                voiceAlert.SpeakAlert(alert);
-            }
+            
 
             var input = new ModelInput
             {
@@ -65,6 +62,16 @@ class Program
             };
 
             var prediction = aiService.Predict(input);
+
+            var fusedAlerts = fusionService.FuseAlerts(alerts, prediction);
+
+            foreach (var alert in fusedAlerts)
+            {
+                Console.WriteLine($"[{alert.Severity}] {alert.Message}");
+
+                notifier.ShowNotification(alert);
+                voiceAlert.SpeakAlert(alert);
+            }
 
             Console.WriteLine($"\n=== AI Prediction ===");
             Console.WriteLine($"System State: {prediction}");
