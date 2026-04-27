@@ -1,28 +1,31 @@
 ﻿using AISystemGuardian.AI;
+using AISystemGuardian.Models;
 using AISystemGuardian.Service;
+
 class Program
 {
-    
     static void Main(string[] args)
     {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+
         var monitor = new SystemMonitorService();
         var logger = new LoggingService();
-        var security  = new SecurityMonitorService();
+        var security = new SecurityMonitorService();
         var alertService = new AlertService();
         var notifier = new NotificationService();
         var voiceAlert = new VoiceService();
         var dataCollector = new DataCollectionService();
         var aiService = new AIModelService();
-        var dataPath = Path.Combine(Directory.GetCurrentDirectory(), "training_data.csv");
-        //aiService.TrainModel(dataPath); ;
         var fusionService = new AIAlertFusionService();
-
+        var anomalyDetector = new AnomalyDetectorService();
 
         while (true)
         {
             var data = monitor.GetMetrics();
             var deviceUsage = security.CheckDeviceUsage();
             var alerts = alertService.GenerateAlerts(data, deviceUsage);
+
+            bool isAnomaly = anomalyDetector.IsAnomaly(data);
 
             Console.Clear();
 
@@ -47,10 +50,12 @@ class Program
 
             logger.Log(data);
 
-            //dataCollector.SaveData(data, deviceUsage, alerts);
+            // Optional (enable later if needed)
+            // dataCollector.SaveData(data, deviceUsage, alerts);
 
-            Console.WriteLine("\n=== Alerts ===");
-            
+            // =========================
+            // AI PREDICTION
+            // =========================
 
             var input = new ModelInput
             {
@@ -63,7 +68,39 @@ class Program
 
             var prediction = aiService.Predict(input);
 
+            Console.WriteLine("\n=== AI Decision ===");
+            Console.WriteLine($"AI says system is: {prediction}");
+
+            // =========================
+            // ANOMALY DETECTION
+            // =========================
+
+            Console.WriteLine("\n=== Anomaly Detection ===");
+
+            if (isAnomaly)
+            {
+                Console.WriteLine("🚨 Unusual behavior detected!");
+
+                // 👉 Add anomaly as alert
+                alerts.Add(new Alert
+                {
+                    Severity = "Critical",
+                    Message = "Anomaly detected in system behavior",
+                    Timestamp = DateTime.Now
+                });
+            }
+            else
+            {
+                Console.WriteLine("System behavior normal");
+            }
+
+            // =========================
+            // AI + ALERT FUSION
+            // =========================
+
             var fusedAlerts = fusionService.FuseAlerts(alerts, prediction);
+
+            Console.WriteLine("\n=== Alerts ===");
 
             foreach (var alert in fusedAlerts)
             {
@@ -72,9 +109,6 @@ class Program
                 notifier.ShowNotification(alert);
                 voiceAlert.SpeakAlert(alert);
             }
-
-            Console.WriteLine($"\n=== AI Prediction ===");
-            Console.WriteLine($"System State: {prediction}");
 
             Thread.Sleep(5000);
         }
